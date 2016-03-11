@@ -27,5 +27,10 @@ Route::get('/', function () {
 */
 
 Route::group(['middleware' => ['web']], function () {
-    //
+
+    Route::get('/stops', 'StopController@index');
+    Route::post('/stop', 'StopController@store');
+    Route::delete('/stop/{stop}', 'StopController@destroy');
+
+    Route::auth();
 });
