@@ -24,37 +24,37 @@
             </div>
 <!-- Gas Mileage -->
             <div class="form-group">
-                <label for="stop-location" class="col-sm-3 control-label">Location</label>
+                <label for="stop-location" class="col-sm-3 control-label">Number of Miles on the car</label>
 
                 <div class="col-sm-6">
-                    <input type="text" name="location" id="stop-location" class="form-control">
+                    <input type="text" name="mileage" id="stop-gas-mileage" class="form-control">
                 </div>
             </div>
 
 <!-- Gas Price -->
             <div class="form-group">
-                <label for="stop-location" class="col-sm-3 control-label">Location</label>
+                <label for="stop-location" class="col-sm-3 control-label">Gas Price</label>
 
                 <div class="col-sm-6">
-                    <input type="text" name="location" id="stop-location" class="form-control">
+                    <input type="text" name="gas_price" id="stop-gas-price" class="form-control">
                 </div>
             </div>
 
 <!-- number of Gallons -->
             <div class="form-group">
-                <label for="stop-location" class="col-sm-3 control-label">Location</label>
+                <label for="stop-location" class="col-sm-3 control-label">Number of Gallons purchased</label>
 
                 <div class="col-sm-6">
-                    <input type="text" name="location" id="stop-location" class="form-control">
+                    <input type="text" name="num_gallons" id="stop-num-gallons" class="form-control">
                 </div>
             </div>
 
 <!-- Notes -->
             <div class="form-group">
-                <label for="stop-location" class="col-sm-3 control-label">Location</label>
+                <label for="stop-location" class="col-sm-3 control-label">Notes</label>
 
                 <div class="col-sm-6">
-                    <input type="text" name="location" id="stop-location" class="form-control">
+                    <input type="textarea" name="notes" id="stop-notes" class="form-control">
                 </div>
             </div>
 
