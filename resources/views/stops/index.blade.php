@@ -45,7 +45,7 @@
                 <label for="stop-location" class="col-sm-3 control-label">Number of Gallons purchased</label>
 
                 <div class="col-sm-6">
-                    <input type="text" name="num_gallons" id="stop-num-gallons" class="form-control">
+                    <input type="text" name="number_gallons" id="stop-num-gallons" class="form-control">
                 </div>
             </div>
 
@@ -60,15 +60,7 @@
 
 
             <!-- Add Stop Button -->
-            <k Name -->
             <div class="form-group">
-                <label for="stop-location" class="col-sm-3 control-label">Location</label>
-
-                <div class="col-sm-6">
-                    <input type="text" name="location" id="stop-location" class="form-control">
-                </div>
-            </div>
-iv class="form-group">
                 <div class="col-sm-offset-3 col-sm-6">
                     <button type="submit" class="btn btn-default">
                         <i class="fa fa-plus"></i> Add Stop
@@ -78,5 +70,66 @@ iv class="form-group">
         </form>
     </div>
 
-    <!-- TODO: Current Stop -->
+        <!-- All Stops -->
+    @if (count($stops) > 0)
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                All Stops
+            </div>
+
+            <div class="panel-body">
+                <table class="table table-striped task-table">
+
+                    <!-- Table Headings -->
+                    <thead>
+                        <th>Date</th>
+                        <th>Location</th>
+			<th>Gas Mileage</th>
+			<th>Number of Gallons</th>
+			<th>Gas Price</th>
+			<th>Notes</th>
+			<th>Modify</th>
+                    </thead>
+
+                    <!-- Table Body -->
+                    <tbody>
+                        @foreach ($stops as $stop)
+                            <tr>
+                                <!-- Stop Name -->
+                                <td class="table-text">
+                                    <div>{{ $stop->created_at }}</div>
+                                </td>
+				<td class="table-text">
+                                    <div>{{ $stop->location }}</div>
+                                </td>
+				<td class="table-text">
+                                    <div>{{ $stop->mileage }}</div>
+                                </td>
+				<td class="table-text">
+                                    <div>{{ $stop->number_gallons }}</div>
+                                </td>
+				<td class="table-text">
+                                    <div>{{ $stop->gas_price }}</div>
+                                </td>
+				<td class="table-text">
+                                    <div>{{ $stop->notes }}</div>
+                                </td>
+
+                                <td>
+                                    <form action="{{ url('stop/'.$stop->id) }}" method="POST">
+           				{!! csrf_field() !!}
+            				{!! method_field('DELETE') !!}
+
+           				 <button type="submit" id="delete-stop-{{ $stop->id }}" class="btn btn-danger">
+               				 	<i class="fa fa-btn fa-trash"></i>Delete
+           				 </button>
+       				    </form>
+                                </td>
+                            </tr>
+                        @endforeach
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    @endif
 @endsection

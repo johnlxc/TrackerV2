@@ -6,11 +6,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class Stop extends Model
 {
-    protected $fillable = ['mileage'];
-    protected $fillable = ['location'];
-    protected $fillable = ['number_gallons'];
-    protected $fillable = ['gas_price'];
-    protected $fillable = ['notes'];
+    protected $fillable = ['mileage','location','number_gallons','gas_price','notes'];
 
     /**
      * Get the user that owns the task.
