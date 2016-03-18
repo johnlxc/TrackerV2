@@ -36,6 +36,14 @@ class StopController extends Controller
 
     }
 
+    public function single($id)
+    {
+	print_r($id);
+    return view('stops.single', [
+	'stop' => Stop::find($id)
+    ]);
+    }
+
     public function store(Request $request)
     {
     $this->validate($request, [
@@ -63,5 +71,10 @@ class StopController extends Controller
         $this->authorize('destroy', $stop);
         $stop->delete();
         return redirect('/stops');
+    }
+
+    public function update(Request $request)
+    {
+
     }
 }
