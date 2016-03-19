@@ -5,10 +5,10 @@
     <div class="row">
         <div class="col-md-10 col-md-offset-1">
             <div class="panel panel-default">
-                <div class="panel-heading">Welcome</div>
+                <div class="panel-heading">Gas Tracker</div>
 
                 <div class="panel-body">
-                    Your Application's Landing Page.
+                    Personal Project of <a href="www.johnlukaszewicz.me">John Lukaszewicz</a> Source Code on <a href="https://github.com/johnlxc/TrackerV2">GitHub</a>
                 </div>
             </div>
         </div>

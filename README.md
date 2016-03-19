@@ -5,7 +5,11 @@ The User logs in and records relevant data every time they fill the car with gas
 I'm rebuilding the app with Laravel because laravel is way better than CodeIgniter
 
 TODO:
+
 Single Stop Page
+
 Edit user Profile
+
 Update Stop
+
 Stats page Global and Single

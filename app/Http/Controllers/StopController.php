@@ -38,7 +38,6 @@ class StopController extends Controller
 
     public function single($id)
     {
-	print_r($id);
     return view('stops.single', [
 	'stop' => Stop::find($id)
     ]);
@@ -75,6 +74,13 @@ class StopController extends Controller
 
     public function update(Request $request)
     {
+
+    }
+
+    public function report(Request $request)
+    {
+
+	return view('stops.report');
 
     }
 }
