@@ -124,6 +124,9 @@
                				 	<i class="fa fa-btn fa-trash"></i>Delete
            				 </button>
        				    </form>
+					<button class="btn btn-submit">
+						<a href="{{ url('stop/'.$stop->id) }}">View</a>
+					</button>
                                 </td>
                             </tr>
                         @endforeach
